@@ -20,6 +20,7 @@ from itens.views import incluir_item, item_enviado
 from index.views import index, buscando, buscar
 from lances.views import *
 from django.conf.urls.static import static
+from django.conf.urls import include
 
 
 urlpatterns = [
@@ -36,6 +37,8 @@ urlpatterns = [
     path('lances/', lances),
     path('lance_enviado/', lance_enviado),
     path('meus_itens/', meus_itens),
+    path('chat/', include('chat.urls')),
+    path('admin/', admin.site.urls),
 
 
 ]
